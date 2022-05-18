@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Python Szakácskönyv</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main>
+			<h1>Python Szakácskönyv</h1>
+			<h2>str – String</h2>
+			<p>
+				<code><a-str>'Vadi'</a-str></code>
+				<code><a-str>"Vadi"</a-str></code>
+				<code><a-str>'9'</a-str></code>
+				<code><a-str>"3.14"</a-str></code>
+				<code><a-str>''</a-str></code>
+			</p>
+			<h2>int – Integer</h2>
+			<p>
+				<code>0</code>
+				<code>3</code>
+				<code>-7</code>
+			</p>
+			<h2>float – Floating Point Number</h2>
+			<p>
+				<code>0.0</code>
+				<code>3.14</code>
+				<code>-7.9</code>
+			</p>
+			<h2>list – Lista (tömb)</h2>
+			<p>
+				<code>[0, 1, 2]</code>
+				<code>[<a-str>'Mesi'</a-str>, <a-str>'Vadi'</a-str>, <a-str>'Farkas'</a-str>]</code>
+				<code>[]</code>
+			</p>
+			<h2>comment – Megjegyzés</h2>
+			<a-code>
+				<a-comment># Bármi</a-comment><br>
+				<a-comment># Akármi</a-comment>
+			</a-code>
+			<h2>Variables – Változók</h2>
+			<a-code>
+				<a-var>NÉV</a-var> = <a-var>ÉRTÉK</a-var>
+			</a-code>
+			<h3>Példák</h3>
+			<a-code>
+				zsebpénz = 1500<br>
+				átlag = 4.8<br>
+				név = <a-str>'Vadi'</a-str>
+			</a-code>
+			<h2>print – Írd ki</h2>
+			<a-code>
+				print(<a-var>KIÍRANDÓ</a-var>)<br>
+				print(<a-var>KIÍRANDÓ</a-var>, <a-var>KIÍRANDÓ</a-var>, <a-var>KIÍRANDÓ</a-var>)
+			</a-code>
+			<h3>Példák</h3>
+			<a-code>
+				print(<a-str>'Győzelem!'</a-str>)<br>
+				print(<a-str>'Az eredmény:'</a-str>, 9)<br>
+				print(<a-str>'A napi átlag:'</a-str>, 5.5, <a-str>'mm'</a-str>)
+			</a-code>
+			<a-code>
+				<a-out>Győzelem!</a-out><br>
+				<a-out>Az eredmény: 9</a-out><br>
+				<a-out>A napi átlag: 5.5 mm</a-out>
+			</a-code>
+			<h2>input – Kérdezd meg</h2>
+			<a-code>
+				<a-var>VÁLTOZÓ_NEVE_STR</a-var> = input(<a-var>KÉRDÉS</a-var>)<br>
+				<a-var>VÁLTOZÓ_NEVE_INT</a-var> = int(input(<a-var>KÉRDÉS</a-var>))<br>
+				<a-var>VÁLTOZÓ_NEVE_FLOAT</a-var> = float(input(<a-var>KÉRDÉS</a-var>))
+			</a-code>
+			<h3>Példák</h3>
+			<a-code>
+				név = input(<a-str>'Mi a neved?'</a-str>)<br>
+				napok = int(input(<a-str>'Hány nap a világ?'</a-str>))<br>
+				átlag = float(input(<a-str>'Mi az átlagod?'</a-str>))<br>
+				print(<a-str>'név ='</a-str>, név)<br>
+				print(<a-str>'napok ='</a-str>, napok)<br>
+				print(<a-str>'átlag ='</a-str>, átlag)
+			</a-code>
+			<a-code>
+				<a-out>
+					Mi a neved?Vadi
+				</a-out><br>
+				<a-out>
+					Hány nap a világ?7
+				</a-out><br>
+				<a-out>
+					Mi az átlagod?4.8
+				</a-out><br>
+				<a-out>
+					név = Vadi
+				</a-out><br>
+				<a-out>
+					napok = 7
+				</a-out><br>
+				<a-out>
+					átlag = 4.8
+				</a-out>
+			</a-code>
+			<h2>Lista kezelés</h2>
+			<h3>Lista elemeinek száma</h3>
+			<a-code>
+				<a-var>ELEMEK_SZÁMA</a-var> = len(<a-var>LISTA</a-var>)
+			</a-code>
+			<h4>Példák</h4>
+			<a-code>
+				gyerekek_száma = len([<a-str>'Mesi'</a-str>, <a-str>'Vadi'</a-str>, <a-str>'Farkas'</a-str>])<br>
+				print(gyerekek_száma)
+			</a-code>
+			<a-code>
+				<a-out>
+					3
+				</a-out>
+			</a-code>
+			<a-code>
+				mérések_száma = len([3.1, 9.9, 4.7, 1.2, 11.5])<br>
+				print(mérések_száma)
+			</a-code>
+			<a-code>
+				<a-out>
+					5
+				</a-out>
+			</a-code>
+			<h3>Hozzáadás a listához</h3>
+			<a-code>
+				<a-var>LISTA_NEVE</a-var>.append(<a-var>ÚJ_LISTA_ELEM</a-var>)
+			</a-code>
+			<h4>Példák</h4>
+			<a-code>
+				gyerekek = [<a-str>'Mesi'</a-str>]<br>
+				gyerekek.append(<a-str>'Vadi'</a-str>)<br>
+				gyerekek.append(<a-str>'Farkas'</a-str>)<br>
+				print(gyerekek)
+			</a-code>
+			<a-code>
+				<a-out>
+					['Mesi', 'Vadi', 'Farkas']
+				</a-out>
+			</a-code>
+			<h2>if / elif / else – Ha / különben, ha / különben</h2>
+			<a-code>
+				if <a-var>FELTÉTEL</a-var>:<br>
+				<a-tab>
+					<a-var>TEENDŐK_HA_A_FELTÉTEL_IGAZ</a-var>
+				</a-tab><br>
+				elif <a-var>FELTÉTEL_2</a-var>:<br>
+				<a-tab>
+					<a-var>TEENDŐK_HA_A_FELTÉTEL_NEM_IGAZ_DE_FELTÉTEL_2_IGAZ</a-var>
+				</a-tab><br>
+				else:<br>
+				<a-tab>
+					<a-var>TEENDŐK_HA_EGYIK_FELTÉTEL_SEM_VOLT_IGAZ</a-var>
+				</a-tab>
+			</a-code>
+			<h3>Példák</h3>
+			<a-code>
+				név = input(<a-str>'Mi a neved?'</a-str>)<br>
+				if név == <a-str>'Vadi'</a-str>:<br>
+				<a-tab>
+					print(<a-str>'Engem is úgy hívnak!'</a-str>)
+				</a-tab><br>
+				print(<a-str>'Szia'</a-str>, név, <a-str>'!'</a-str>)
+			</a-code>
+			<a-code>
+				<a-out>
+					Mi a neved?Tibor
+				</a-out><br>
+				<a-out>
+					Szia Tibor !
+				</a-out>
+			</a-code>
+			<a-code>
+				<a-out>
+					Mi a neved?Vadi
+				</a-out><br>
+				<a-out>
+					Engem is úgy hívnak!
+				</a-out><br>
+				<a-out>
+					Szia Vadi !
+				</a-out>
+			</a-code>
+			<a-code>
+				kor = int(input(<a-str>'Hány éves vagy?'</a-str>))<br>
+				if kor == 15:<br>
+				<a-tab>
+					print(<a-str>'Velem egyidős vagy!'</a-str>)
+				</a-tab><br>
+				<a-tab>
+					print(<a-str>'Tök jó!'</a-str>)</a-tab><br>
+				elif kor == 13:<br>
+				<a-tab>
+					print(<a-str>'Az öcsém lehetnél.'</a-str>)
+				</a-tab><br>
+				elif kor &lt; 15:<br>
+				<a-tab>
+					print(<a-str>'Fiatalabb vagy nálam!'</a-str>)
+				</a-tab><br>
+				elif kor >= 100:<br>
+				<a-tab>
+					print(<a-str>'Aztaaa!'</a-str>)</a-tab><br>
+				else:<br>
+				<a-tab>
+					print(<a-str>'Idősebb vagy nálam!'</a-str>)
+				</a-tab>
+			</a-code>
+			<a-code>
+				<a-out>
+					Hány éves vagy?14
+				</a-out><br>
+				<a-out>
+					Fiatalabb vagy nálam!
+				</a-out>
+			</a-code>
+			<a-code>
+				<a-out>
+					Hány éves vagy?13
+				</a-out><br>
+				<a-out>
+					Az öcsém lehetnél.
+				</a-out>
+			</a-code>
+			<a-code>
+				<a-out>
+					Hány éves vagy?16
+				</a-out><br>
+				<a-out>
+					Idősebb vagy nálam!
+				</a-out>
+			</a-code>
+			<a-code>
+				<a-out>
+					Hány éves vagy?15
+				</a-out><br>
+				<a-out>
+					Velem egyidős vagy!
+				</a-out><br>
+				<a-out>
+					Tök jó!
+				</a-out>
+			</a-code>
+			<h2>for – Iterálás egy lista elemein</h2>
+			<a-code>
+				for <a-var>ELEM</a-var> in <a-var>LISTA</a-var>:<br>
+				<a-tab>
+					<a-var>TEENDŐK_ELEMMEL</a-var>
+				</a-tab>
+			</a-code>
+			<h3>Példák</h3>
+			<a-code>
+				gyerekek = [<a-str>'Mesi'</a-str>, <a-str>'Vadi'</a-str>, <a-str>'Farkas'</a-str>]<br>
+				for gyerek in gyerekek:<br>
+				<a-tab>
+					print('Szia', gyerek, '!')
+				</a-tab>
+			</a-code>
+			<a-code>
+				<a-out>Szia Mesi !</a-out><br>
+				<a-out>Szia Vadi !</a-out><br>
+				<a-out>Szia Farkas !</a-out>
+			</a-code>
+		</main>
+		<aside>
+			<button onclick="document.getElementById('menu').showModal()">=</button>
+		</aside>
+		<dialog id="menu">
+			<form method="dialog">
+				<a-window-header>
+					<a-window-header-label>Menü</a-window-header-label>
+					<button>X</button>
+				</a-window-header>
+				<a-window-body id="toc"></a-window-body>
+			</form>
+		</dialog>
+		<script type="module">
+			for (const elem of document.querySelectorAll('a-tab')) {
+				for (const child of elem.childNodes) {
+					if (child.nodeType === Node.TEXT_NODE) {
+						child.textContent = child.textContent.replace(/^\s*/, '')
+					} else {
+						break
+					}
+				}
+				const text = document.createTextNode("\u00a0\u00a0\u00a0\u00a0")
+				elem.prepend(text)
+			}
+		</script>
+		<script type="module">
+			const toc = document.getElementById('toc')
+			let id = 0
+			for (const elem of document.querySelectorAll('h2,h3,h4,h5,h6')) {
+				const indent = parseInt(elem.tagName.slice(1))
+				const anId = `id-${id++}`
+				elem.id = anId
+				const entry = document.createElement('div')
+				entry.className = `indent-${indent}`
+				const link = document.createElement('a')
+				entry.append(link)
+				link.href = `#${anId}`
+				link.innerText = elem.innerText
+				link.onclick = () => {
+					document.getElementById('menu').close()
+				}
+				toc.append(entry)
+			}
+		</script>
+	</body>
+</html>

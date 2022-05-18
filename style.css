@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	word-wrap: break-word;
+	tab-size: 4;
+}
+
+html {
+	font-family: ui-serif, serif;
+	font-size: 14px;
+	line-height: 1.5;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	gap: 20px;
+	padding-bottom: 100vh;
+}
+
+main {
+	flex: 1 0 0;
+	overflow: auto;
+}
+
+aside {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+a {
+	color: slateblue;
+}
+
+code {
+	font-family: ui-monospace, monospace;
+	background: lightgray;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+a-code {
+	display: block;
+	font-family: ui-monospace, monospace;
+	background: lightgray;
+	border-radius: 3px;
+	margin: 1em 0;
+	padding: 3px;
+}
+
+a-var {
+	font-weight: bold;
+	background: crimson;
+	color: white;
+	border-radius: 3px;
+	padding: 1px;
+}
+
+a-str {
+	color: green;
+}
+
+a-comment {
+	color: crimson;
+}
+
+a-out {
+	color: blue;
+}
+a-out::before {
+	content: '→ ';
+}
+
+a-esc {
+	color: darkgray;
+}
+
+a-tab {
+	position: relative;
+}
+a-tab::before {
+	content: '|';
+	color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+}
+
+.indent-3 {
+	padding-left: 10px;
+}
+.indent-4 {
+	padding-left: 20px;
+}
+.indent-5 {
+	padding-left: 30px;
+}
+.indent-6 {
+	padding-left: 40px;
+}
+
+dialog {
+	padding: 0;
+}
+dialog > form {
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+a-window-header {
+	flex: 0 0 auto;
+	display: flex;
+	background: lightgray;
+	padding: 5px;
+}
+
+a-window-header-label {
+	flex: 1 0 0;
+}
+
+a-window-body {
+	flex: 1 0 auto;
+	overflow: auto;
+	padding: 5px;
+}
